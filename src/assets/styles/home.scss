@@ -1,0 +1,49 @@
+@use 'base';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: base.$white-100;
+}
+
+body > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+
+  padding: 12px 30px;
+
+  a img {
+    width: 40px;
+  }
+
+  nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 10px;
+
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: base.$black-900;
+    }
+  }
+
+  .button {
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: base.$white-100;
+    background-color: base.$blue-500;
+  }
+}
