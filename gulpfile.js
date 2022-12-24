@@ -64,10 +64,15 @@ gulp.task("favicon", () => {
   return gulp.src("src/favicon.ico").pipe(gulp.dest("dist"));
 });
 
+gulp.task("public", () => {
+  return gulp.src("src/public/*").pipe(gulp.dest("dist/public"))
+})
+
 export default function () {
   gulp.watch("src/assets/styles/*.scss", gulp.task("css"));
   gulp.watch("src/*.html", gulp.task("html"));
   gulp.watch("src/assets/images/*", gulp.task("image"));
+  gulp.watch("src/public/*", gulp.task("public"));
 }
 
-export const build = gulp.parallel("css", "html", "image", "favicon");
+export const build = gulp.parallel("css", "html", "image", "favicon", "public");
