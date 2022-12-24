@@ -1,4 +1,4 @@
-@use 'base';
+@use "base";
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: base.$white-100;
 }
 
@@ -97,3 +97,46 @@ section.introduction {
   }
 }
 
+section.design {
+  max-width: 1230px;
+  padding: 0 30px;
+  margin: 4rem auto;
+
+  p {
+    margin-top: 1.5rem;
+    text-align: justify;
+  }
+
+  .cards {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .card {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    justify-content: space-between;
+
+    h3 {
+      text-align: right;
+    }
+
+    img {
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.3);
+    }
+  }
+
+  .card.reverse {
+    flex-direction: row-reverse;
+
+    h3 {
+      text-align: initial;
+    }
+  }
+}

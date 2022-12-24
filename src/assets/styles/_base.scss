@@ -1,6 +1,18 @@
-$blue-500: #1E6FD9;
-$blue-200: #94BDF2;
+$blue-500: #1e6fd9;
+$blue-200: #94bdf2;
 $black-900: #000000;
 $black-800: #202020;
 $black-700: #404040;
-$white-100: #F2F2F2;
+$white-100: #f2f2f2;
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: $black-900;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: $black-900;
+}
