@@ -24,6 +24,11 @@ body > header {
   a img {
     width: 40px;
   }
+  nav {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
 
   nav ul li {
     list-style: none;
