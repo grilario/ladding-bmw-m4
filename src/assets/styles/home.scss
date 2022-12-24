@@ -140,3 +140,137 @@ section.design {
     }
   }
 }
+
+section.perfomance {
+  max-width: 1230px;
+  padding: 0 30px;
+  margin: 4rem auto;
+  margin-top: 6rem;
+  
+  p {
+    margin-top: 1.5rem;
+    text-align: justify;
+  }
+
+  .monitor > div {
+    position: relative;
+
+    p {
+      margin-top: 1.8rem;
+      margin-bottom: 0.6rem;
+      font-size: 14px;
+      font-weight: 600;
+      color: base.$black-900;
+    }
+  }
+
+  .monitor .progress {
+    height: 15px;
+    background-color: #d0d0d0;
+    overflow-x: hidden;
+  }
+
+  .monitor .progress .value {
+    height: 100%;
+    background-color: base.$blue-500;
+  }
+
+  .monitor .progress::before {
+    position: absolute;
+    content: attr(value);
+    bottom: 0;
+    transform: translate(-40%, 130%);
+
+    font-size: 12px;
+    font-weight: 600;
+    color: base.$black-900;
+  }
+
+  .monitor .progress::after {
+    position: absolute;
+    content: attr(max-value);
+    bottom: 0;
+    transform: translate(-40%, 130%);
+
+    font-size: 12px;
+    font-weight: 400;
+    color: base.$black-900;
+  }
+
+  .monitor .velocity .progress {
+    width: 55%;
+  }
+  .monitor .velocity .progress .value {
+    width: 84%;
+  }
+  .monitor .velocity .progress::before {
+    left: calc(55% * 0.84);
+  }
+  .monitor .velocity .progress::after {
+    left: 55%;
+  }
+
+  .monitor .top-speed .progress {
+    width: 72%;
+  }
+  .monitor .top-speed .progress .value {
+    width: 93%;
+  }
+  .monitor .top-speed .progress::before {
+    left: calc(72% * 0.93);
+  }
+  .monitor .top-speed .progress::after {
+    left: 72%;
+  }
+
+  .monitor .cv .progress {
+    width: 48%;
+  }
+  .monitor .cv .progress .value {
+    width: 88%;
+  }
+  .monitor .cv .progress::before {
+    left: calc(48% * 0.88);
+  }
+  .monitor .cv .progress::after {
+    left: 48%;
+  }
+
+  .cards {
+    margin-top: 6rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    height: 380px;
+  }
+
+  .card {
+    width: 310px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.3);
+
+    img {
+      width: 100%;
+    }
+
+    .text {
+      padding: 25px;
+
+      h3 {
+        font-size: 14px;
+        font-weight: bold;
+        color: base.$black-900;
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        color: base.$black-900;
+        text-align: center;
+      }
+    }
+  }
+}
