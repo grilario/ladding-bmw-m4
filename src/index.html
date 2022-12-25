@@ -203,11 +203,104 @@
           </div>
         </div>
       </section>
+      <section class="technologies">
+        <h2>Tecnologias</h2>
+        <img src="./assets/images/panel.jpg" alt="Painel da BMW M4" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Tempor nunc ultrices vivamus
+          mauris. Ipsum sem faucibus convallis aliquet diam tempor amet elit
+          eget. Turpis faucibus tortor volutpat quisque et. Nullam sapien orci
+          dictum feugiat. Ultrices suspendisse commodo suscipit mollis habitant
+          ut purus. Faucibus eget cursus ultricies ornare laoreet iaculis vitae
+          amet dolor. Duis mattis sit dignissim cum venenatis tortor vel quis.
+          Ultricies dignissim molestie velit tristique proin sapien. Sit et
+          ornare viverra curabitur quam at quisque. Sed scelerisque nulla
+          scelerisque ultrices at. Ac donec nisi et leo. Egestas tincidunt felis
+          consequat aenean. Euismod ut quis et at sed est quis scelerisque sed.
+          Turpis rutrum dictumst ipsum cras neque.
+        </p>
+        <div style="position: relative" data-aos="fade-up">
+          <button class="advance">&#10095;</button>
+          <button class="back none">&#10094;</button>
+          <div class="scroll">
+            <div class="cards">
+              <div class="card">
+                <img src="./assets/images/any.jpg" alt="Motor" />
+                <div class="text">
+                  <h3>Painel de instrumentos</h3>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./assets/images/any.jpg" alt="Motor" />
+                <div class="text">
+                  <h3>Parking Assistent</h3>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./assets/images/any.jpg" alt="Motor" />
+                <div class="text">
+                  <h3>Live cockpit</h3>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./assets/images/any.jpg" alt="Motor" />
+                <div class="text">
+                  <h3>Head Up Display</h3>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./assets/images/any.jpg" alt="Motor" />
+                <div class="text">
+                  <h3>Assistente de Condução</h3>
+                  <p>Description</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>Feito com ❤ por @grilario</p>
+      </footer>
     </main>
 
     <script src="./public/aos.js"></script>
     <script>
       AOS.init();
+
+      const verticalScrooll = document.querySelector(".scroll");
+      const advance = document.querySelector(".advance");
+      const back = document.querySelector(".back");
+
+      function advanceScrool() {
+        verticalScrooll.scrollTo(1800, 0);
+      }
+
+      function backScrool() {
+        verticalScrooll.scrollTo(0, 0);
+      }
+
+      advance.addEventListener("click", advanceScrool);
+      back.addEventListener("click", backScrool);
+
+      verticalScrooll.addEventListener("scroll", (event) => {
+        if (
+          verticalScrooll.scrollLeft + verticalScrooll.clientWidth ===
+          verticalScrooll.scrollWidth
+        ) {
+          advance.classList.add("none");
+          back.classList.remove("none");
+        }
+
+        if (verticalScrooll.scrollLeft === 0) {
+          back.classList.add("none");
+          advance.classList.remove("none");
+        }
+      });
     </script>
   </body>
 </html>
