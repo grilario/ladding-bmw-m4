@@ -5,14 +5,18 @@ $black-800: #202020;
 $black-700: #404040;
 $white-100: #f2f2f2;
 
+html {
+  font-size: 62.5%;
+}
+
 h2 {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   color: $black-900;
 }
 
 p {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   color: $black-900;
 }

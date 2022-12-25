@@ -23,7 +23,7 @@ body > header {
   width: 100%;
   z-index: 10;
 
-  padding: 12px 30px;
+  padding: 1.2rem 3rem;
 
   a img {
     width: 40px;
@@ -102,9 +102,11 @@ section.introduction {
 }
 
 section.design {
+  width: 100%;
   max-width: 1230px;
   padding: 2rem 30px 0;
   margin: 2rem auto 4rem;
+  overflow: hidden;
 
   p {
     margin-top: 1.5rem;
@@ -131,6 +133,7 @@ section.design {
     }
 
     img {
+      width: 50%;
       border-radius: 10px;
       box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.3);
     }
@@ -145,7 +148,7 @@ section.design {
   }
 }
 
-section.perfomance {
+section.performance {
   max-width: 1230px;
   padding: 2rem 30px 0;
   margin: 4rem auto;
@@ -218,10 +221,10 @@ section.perfomance {
     width: 72%;
   }
   .monitor .top-speed .progress .value {
-    width: 93%;
+    width: 85%;
   }
   .monitor .top-speed .progress::before {
-    left: calc(72% * 0.93);
+    left: calc(72% * 0.85);
   }
   .monitor .top-speed .progress::after {
     left: 72%;
@@ -398,14 +401,120 @@ section.technologies {
 
 body main > footer {
   width: 100%;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #D9D9D9;
+  background: #d9d9d9;
 
   p {
     display: inline;
     padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  body > header {
+    padding: 1.2rem;
+
+    nav {
+      display: none;
+    }
+  }
+
+  // TODO: introduction section mobile
+
+  section.design {
+    .cards {
+      width: 100%;
+    }
+
+    .card {
+      flex-direction: column;
+
+      h3 {
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+      }
+
+    }
+
+    .card.reverse {
+      flex-direction: column;
+
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+
+  section.performance {  
+    .monitor > div {
+      margin-top: 4rem;
+    }
+
+    .monitor .top-speed .progress {
+      width: 95%;
+    }
+    .monitor .top-speed .progress .value {
+      width: 82%;
+    }
+    .monitor .top-speed .progress::before {
+      left: calc(95% * 0.82);
+    }
+    .monitor .top-speed .progress::after {
+      left: 95%;
+    }
+  
+    .monitor .cv .progress {
+      width: 80%;
+    }
+    .monitor .cv .progress .value {
+      width: 80%;
+    }
+    .monitor .cv .progress::before {
+      left: calc(80% * 0.8);
+    }
+    .monitor .cv .progress::after {
+      left: 80%;
+    }
+
+    .cards {
+      align-items: center;
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .card {
+      width: 100%;
+      min-height: 360px;
+    }
+  }
+
+  section.technologies {
+    > img {
+      height: 12rem;
+      object-fit: cover;
+    }
+
+    .advance {
+      display: none;
+    }
+
+    .back {
+      display: none;
+    }
+
+    .cards {
+      width: 1200px;
+      height: 360px;
+    }
+
+    .card {
+      width: 18%;
+    }
   }
 }
