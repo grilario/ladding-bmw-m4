@@ -70,10 +70,10 @@ section.introduction {
 
   h2 {
     position: absolute;
-    top: 12rem;
-    left: 6rem;
+    top: 26%;
+    left: 4%;
 
-    font-size: 56px;
+    font-size: 5.6rem;
     font-weight: bold;
     color: base.$black-900;
 
@@ -84,8 +84,8 @@ section.introduction {
 
   div {
     position: absolute;
-    top: 14rem;
-    right: 10rem;
+    top: 35%;
+    right: 8%;
   }
 
   h1 {
@@ -413,7 +413,7 @@ body main > footer {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 740px) {
   body > header {
     padding: 1.2rem;
 
@@ -421,8 +421,36 @@ body main > footer {
       display: none;
     }
   }
+}
 
-  // TODO: introduction section mobile
+@media (max-width: 720px) {
+  section.introduction {
+    background: url("../images/car-mobile.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h2 {
+      font-size: 4.2rem;
+      width: 80%;
+      top: 12rem;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+  
+    div {
+      width: 80%;
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+
+      h1 {
+        margin-top: .8rem;
+      }
+    }
+  }
 
   section.design {
     .cards {
